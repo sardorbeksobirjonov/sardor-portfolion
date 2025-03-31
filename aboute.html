@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sardor">
+    <meta name="description" content="Mening rasmiy portfolio saytim. Loyihalarim, aloqa ma’lumotlari va xizmatlarim haqida ma’lumot oling.">
+    <meta name="keywords" content="portfolio, veb-dasturlash, web developer, Sardor, dasturchi, frontend, backend, sayt yaratish">
+    <meta name="robots" content="index, follow">
+    <title>About</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 1.5s ease-out',
+                        'slide-in': 'slideIn 1s ease-out',
+                        'scale-up': 'scaleUp 0.5s ease-in-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideIn: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        scaleUp: {
+                            '0%': { transform: 'scale(0.8)' },
+                            '100%': { transform: 'scale(1)' }
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-gray-100 transition-colors duration-500 animate-fade-in">
+    <!-- Nav Bar -->
+    <nav id="navbar" class="flex justify-between items-center p-5 bg-white shadow-lg fixed w-full top-0 transition-all duration-500 animate-slide-in">
+        <div class="text-2xl font-bold text-black p-3">Mr. Programmer</div>
+        <div id="navLinks" class="hidden md:flex space-x-5 font-medium">
+            <a href="index.html" class="relative text-black hover:text-gray-600 transition after:block after:h-[4px] after:bg-blue-500 after:w-full after:rounded-full after:transition-transform after:duration-300 after:translate-y-2 after:scale-x-0 hover:after:scale-x-100">Home</a>
+            <a href="about.html" class="relative text-blue-500 font-bold after:block after:h-[4px] after:bg-blue-500 after:w-full after:rounded-full after:translate-y-2">About</a>
+            <a href="Portfolio.html" class="relative text-black hover:text-gray-600 transition after:block after:h-[4px] after:bg-blue-500 after:w-full after:rounded-full after:transition-transform after:duration-300 after:translate-y-2 after:scale-x-0 hover:after:scale-x-100">Portfolio</a>
+            <!-- <a href="#" class="relative text-black hover:text-gray-600 transition after:block after:h-[4px] after:bg-blue-500 after:w-full after:rounded-full after:transition-transform after:duration-300 after:translate-y-2 after:scale-x-0 hover:after:scale-x-100">-</a> -->
+            <a href="contact.html" class="relative text-black hover:text-gray-600 transition after:block after:h-[4px] after:bg-blue-500 after:w-full after:rounded-full after:transition-transform after:duration-300 after:translate-y-2 after:scale-x-0 hover:after:scale-x-100">Contact</a>
+        </div>
+        <button id="changeTheme" class="px-4 py-2 border border-blue-500 text-blue-500 rounded-md hover:bg-blue-500 hover:text-white transition">Oʻzgarish</button>
+    </nav>
+
+    <!-- About Section -->
+    <section class="flex flex-col md:flex-row items-center justify-center mt-20 p-10 space-x-10 mt-[200px]">
+        <!-- Image -->
+        <div class="relative w-72 h-72 overflow-hidden rounded-full border-4 border-gray-300 shadow-lg transition-transform duration-500 hover:scale-110 animate-slide-in">
+            <img src="danial-igdery-FCHlYvR5gJI-unsplash.jpg" alt="Sardorbek Sobirjonov" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Text (Orqa fon yo‘q) -->
+        <div class="max-w-xl p-6 rounded-lg shadow-xl text-center md:text-left animate-fade-in">
+            <h1 class="text-3xl font-bold text-gray-800">Sardorbek Sobirjonov</h1>
+            <p class="text-gray-600 mt-3 animate-slide-in">
+                Men full-stack dasturchi sifatida zamonaviy va interaktiv veb-saytlar, dasturlar va botlar yarataman. 
+                Har bir loyihamda ishonchlilik, tezkorlik va kreativlik bo‘lishiga e’tibor beraman.  
+                Mening maqsadim – yangi texnologiyalar yordamida hayotni osonlashtirish.
+            </p>
+            <button class="mt-5 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg transition hover:bg-blue-700 animate-scale-up">
+                MY Developer
+            </button>
+
+            <!-- Social Icons -->
+            <div class="flex justify-center md:justify-start space-x-4 mt-5">
+                <a href="#" class="text-blue-500 text-2xl transition-transform duration-300 hover:scale-125"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="text-pink-500 text-2xl transition-transform duration-300 hover:scale-125"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-red-500 text-2xl transition-transform duration-300 hover:scale-125"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById("changeTheme").addEventListener("click", function() {
+            document.body.classList.toggle("bg-gray-900");
+            document.body.classList.toggle("text-white");
+
+            let navbar = document.getElementById("navbar");
+            navbar.classList.toggle("bg-white");
+            navbar.classList.toggle("bg-gray-800");
+            navbar.classList.toggle("text-white");
+
+            this.classList.toggle("border-red-500");
+            this.classList.toggle("shadow-lg");
+
+            // Link ranglari o'zgarishi
+            let links = document.querySelectorAll("#navLinks a");
+            links.forEach(link => {
+                link.classList.toggle("text-white");
+                link.classList.toggle("hover:text-gray-300");
+            });
+        });
+
+        // Sahifa yuklanayotganda animatsiya
+        window.onload = function() {
+            document.body.classList.add("animate-fade-in");
+        };
+    </script>
+
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
